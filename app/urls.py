@@ -1,0 +1,62 @@
+from django.urls import path
+from app.views import *
+
+app_name = 'app'
+urlpatterns = [
+    path('upload/csv/users/', upload_user_csv),
+    path('upload/csv/countries/', upload_country_csv),
+    path('upload/csv/cities/', upload_city_csv),
+    path('upload/csv/addresses/', upload_address_csv),
+    path('upload/csv/companies/', upload_company_csv),
+    path('upload/csv/departments/', upload_department_csv),
+    path('upload/csv/teams/', upload_team_csv),
+    path('upload/csv/specializations/', upload_specialization_csv),
+    path('upload/csv/products/', upload_product_csv),
+    path('upload/csv/tasks/', upload_task_csv),
+    path('upload/csv/team_tasks/', upload_team_task_csv),
+    path('upload/csv/employees/', upload_employee_csv),
+    path('upload/csv/skills/', upload_skill_csv),
+    path('upload/csv/employees_skills/', upload_employees_skill_csv),
+
+    # path('countries/add/', AddManyCountriesView.as_view()),
+
+    path('countries/', CountriesListView.as_view()),
+    path('cities/', CitiesListView.as_view()),
+    path('addresses/', AddressesListView.as_view()),
+    path('companies/', CompaniesListView.as_view()),
+    path('departments/', DepartmentsListView.as_view()),
+    path('teams/', TeamsListView.as_view()),
+    path('specializations/', SpecializationsListView.as_view()),
+    path('products/', ProductsListView.as_view()),
+    path('tasks/', TasksListView.as_view()),
+    path('team_tasks/', Team_tasksListView.as_view()),
+    path('employees/', EmployeesListView.as_view()),
+    path('skills/', SkillsListView.as_view()),
+    path('employees_skills/', Employees_skillsListView.as_view()),
+
+    path('confirmed_employees/', ConfirmedEmployeesListView.as_view()),
+
+    path('country/add/', AddCountryView.as_view()),
+    path('city/add/', AddCityView.as_view()),
+    path('address/add/', AddAddressView.as_view()),
+    path('company/add/', AddCompanyView.as_view()),
+    path('department/add/', AddDepartmentView.as_view()),
+    path('team/add/', AddTeamView.as_view()),
+    path('specialization/add/', AddSpecializationView.as_view()),
+    path('product/add/', AddProductView.as_view()),
+    path('task/add/', AddTaskView.as_view()),
+    path('employee/add/', AddEmployeeView.as_view()),
+    path('skill/add/', AddSkillView.as_view()),
+
+    path('country/<int:pk>/', CountryView.as_view()),
+    path('city/<int:pk>/', CityView.as_view()),
+    path('address/<int:pk>/', AddressView.as_view()),
+    path('company/<int:pk>/', CompanyView.as_view()),
+    path('department/<int:pk>/', DepartmentView.as_view()),
+    path('team/<int:pk>/', TeamView.as_view()),
+    path('specialization/<int:pk>/', SpecializationView.as_view()),
+    path('product/<int:pk>/', ProductView.as_view()),
+    path('task/<int:pk>/', TaskView.as_view()),
+    path('employee/<int:pk>/', EmployeeView.as_view()),
+    path('skill/<int:pk>/', SkillView.as_view()),
+]
